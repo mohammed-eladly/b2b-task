@@ -1,0 +1,16 @@
+{
+"id":1,
+  "vendorUID": "f2fcdbb9-20aa-44cf-acbd-16720db2590d",
+  "title": "update Corn Flex-unit-test",
+  "description": "Healthy Food-1",
+  "price": "2000",
+  "numberOfViews": 24,
+  "numberOfBadImpressions": 8,
+  "numberOfGoodImpressions": 16,
+  "dietarySet": [
+    
+    {
+      "id": 2
+    }
+  ]
+}

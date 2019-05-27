@@ -1,0 +1,1513 @@
+{
+	"info": {
+		"_postman_id": "f4c74af6-2730-47a7-a88d-21b79c730663",
+		"name": "B2BFoodGroup",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ProductApi",
+			"item": [
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/B2BFoodGroupTask/products/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"B2BFoodGroupTask",
+								"products",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByTitle",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/B2BFoodGroupTask/products/title/corn",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"B2BFoodGroupTask",
+								"products",
+								"title",
+								"corn"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findWithLimit",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/B2BFoodGroupTask/products/limit/100",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"B2BFoodGroupTask",
+								"products",
+								"limit",
+								"100"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createProduct",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file"
+								},
+								{
+									"key": "model",
+									"value": "{\n  \"vendorUID\": \"f2fcdbb9-20aa-44cf-acbd-16720db2590d\",\n  \"title\": \"Corn Flex\",\n  \"description\": \"Healthy Food-1\",\n  \"price\": \"2000\",\n  \"numberOfViews\": 24,\n  \"numberOfBadImpressions\": 8,\n  \"numberOfGoodImpressions\": 16,\n  \"dietarySet\": [\n    \n    {\n      \"id\": 2\n    }\n  ]\n}\n",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/B2BFoodGroupTask/products/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"B2BFoodGroupTask",
+								"products",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProduct",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file"
+								},
+								{
+									"key": "model",
+									"value": "{\n\"id\":3,\n  \"vendorUID\": \"f2fcdbb9-20aa-44cf-acbd-16720db2590d\",\n  \"title\": \"Corn Flex\",\n  \"description\": \"Healthy Food-1\",\n  \"price\": \"2000\",\n  \"numberOfViews\": 24,\n  \"numberOfBadImpressions\": 8,\n  \"numberOfGoodImpressions\": 16,\n  \"dietarySet\": [\n    \n    {\n      \"id\": 2\n    }\n  ]\n}\n",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/B2BFoodGroupTask/products/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"B2BFoodGroupTask",
+								"products",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProductById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/B2BFoodGroupTask/products/deleteById/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"B2BFoodGroupTask",
+								"products",
+								"deleteById",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProductByTitle",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/B2BFoodGroupTask/products/deleteByTitle/Corn Flex-2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"B2BFoodGroupTask",
+								"products",
+								"deleteByTitle",
+								"Corn Flex-2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searchByTitleOrDescription",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/B2BFoodGroupTask/products/search/corn",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"B2BFoodGroupTask",
+								"products",
+								"search",
+								"corn"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ProductApi_TEST",
+			"item": [
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://ec2-35-174-111-88.compute-1.amazonaws.com:8080/B2BFoodGroupTask/products/1",
+							"protocol": "http",
+							"host": [
+								"ec2-35-174-111-88",
+								"compute-1",
+								"amazonaws",
+								"com"
+							],
+							"port": "8080",
+							"path": [
+								"B2BFoodGroupTask",
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByTitle",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://ec2-35-174-111-88.compute-1.amazonaws.com:8080/B2BFoodGroupTask/products/title/corn",
+							"protocol": "http",
+							"host": [
+								"ec2-35-174-111-88",
+								"compute-1",
+								"amazonaws",
+								"com"
+							],
+							"port": "8080",
+							"path": [
+								"B2BFoodGroupTask",
+								"products",
+								"title",
+								"corn"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "findByTitle",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "http://ec2-35-174-111-88.compute-1.amazonaws.com:8080/B2BFoodGroupTask/products/title/corn",
+									"protocol": "http",
+									"host": [
+										"ec2-35-174-111-88",
+										"compute-1",
+										"amazonaws",
+										"com"
+									],
+									"port": "8080",
+									"path": [
+										"B2BFoodGroupTask",
+										"products",
+										"title",
+										"corn"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 26 May 2019 00:31:11 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked",
+									"name": "Transfer-Encoding",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								}
+							],
+							"cookie": [],
+							"body": "{\"statusCode\":\"OK\",\"errorMessage\":null,\"result\":[{\"id\":1,\"vendorUID\":\"f2fcdbb9-20aa-44cf-acbd-16720db2590d\",\"title\":\"Corn Flex\",\"description\":\"Healthy Food-1\",\"price\":2000.0,\"imageEntity\":{\"id\":1,\"imageName\":\"corn-flex.jpeg\",\"imageUrl\":\"https://b2b-food-group-images.s3.amazonaws.com/corn-flex.jpeg\"},\"numberOfViews\":24,\"numberOfBadImpressions\":8,\"numberOfGoodImpressions\":16}],\"success\":true}"
+						}
+					]
+				},
+				{
+					"name": "findWithLimit",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://ec2-35-174-111-88.compute-1.amazonaws.com:8080/B2BFoodGroupTask/products/limit/100",
+							"protocol": "http",
+							"host": [
+								"ec2-35-174-111-88",
+								"compute-1",
+								"amazonaws",
+								"com"
+							],
+							"port": "8080",
+							"path": [
+								"B2BFoodGroupTask",
+								"products",
+								"limit",
+								"100"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "findWithLimit",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "http://ec2-35-174-111-88.compute-1.amazonaws.com:8080/B2BFoodGroupTask/products/limit/100",
+									"protocol": "http",
+									"host": [
+										"ec2-35-174-111-88",
+										"compute-1",
+										"amazonaws",
+										"com"
+									],
+									"port": "8080",
+									"path": [
+										"B2BFoodGroupTask",
+										"products",
+										"limit",
+										"100"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 26 May 2019 00:31:33 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked",
+									"name": "Transfer-Encoding",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								}
+							],
+							"cookie": [],
+							"body": "{\"statusCode\":\"OK\",\"errorMessage\":null,\"result\":[{\"id\":1,\"vendorUID\":\"f2fcdbb9-20aa-44cf-acbd-16720db2590d\",\"title\":\"Corn Flex\",\"description\":\"Healthy Food-1\",\"price\":2000.0,\"imageEntity\":{\"id\":1,\"imageName\":\"corn-flex.jpeg\",\"imageUrl\":\"https://b2b-food-group-images.s3.amazonaws.com/corn-flex.jpeg\"},\"numberOfViews\":24,\"numberOfBadImpressions\":8,\"numberOfGoodImpressions\":16}],\"success\":true}"
+						}
+					]
+				},
+				{
+					"name": "createProduct",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file"
+								},
+								{
+									"key": "model",
+									"value": "{\n  \"vendorUID\": \"f2fcdbb9-20aa-44cf-acbd-16720db2590d\",\n  \"title\": \"Corn\",\n  \"description\": \"Healthy Food-1\",\n  \"price\": \"2000\",\n  \"numberOfViews\": 24,\n  \"numberOfBadImpressions\": 8,\n  \"numberOfGoodImpressions\": 16,\n  \"dietarySet\": [\n    \n    {\n      \"id\": 2\n    }\n  ]\n}\n",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://ec2-35-174-111-88.compute-1.amazonaws.com:8080/B2BFoodGroupTask/products/create",
+							"protocol": "http",
+							"host": [
+								"ec2-35-174-111-88",
+								"compute-1",
+								"amazonaws",
+								"com"
+							],
+							"port": "8080",
+							"path": [
+								"B2BFoodGroupTask",
+								"products",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "createProduct",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": {
+												"0": {}
+											}
+										},
+										{
+											"key": "model",
+											"value": "{\n  \"vendorUID\": \"f2fcdbb9-20aa-44cf-acbd-16720db2590d\",\n  \"title\": \"Corn Flex\",\n  \"description\": \"Healthy Food-1\",\n  \"price\": \"2000\",\n  \"numberOfViews\": 24,\n  \"numberOfBadImpressions\": 8,\n  \"numberOfGoodImpressions\": 16,\n  \"dietarySet\": [\n    \n    {\n      \"id\": 2\n    }\n  ]\n}\n",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://ec2-35-174-111-88.compute-1.amazonaws.com:8080/B2BFoodGroupTask/products/create",
+									"protocol": "http",
+									"host": [
+										"ec2-35-174-111-88",
+										"compute-1",
+										"amazonaws",
+										"com"
+									],
+									"port": "8080",
+									"path": [
+										"B2BFoodGroupTask",
+										"products",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 26 May 2019 00:28:05 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked",
+									"name": "Transfer-Encoding",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								}
+							],
+							"cookie": [],
+							"body": "{\"statusCode\":\"OK\",\"errorMessage\":null,\"result\":{\"id\":1,\"vendorUID\":\"f2fcdbb9-20aa-44cf-acbd-16720db2590d\",\"title\":\"Corn Flex\",\"description\":\"Healthy Food-1\",\"price\":2000.0,\"imageEntity\":{\"id\":1,\"imageName\":\"corn-flex.jpeg\",\"imageUrl\":\"https://b2b-food-group-images.s3.amazonaws.com/corn-flex.jpeg\"},\"numberOfViews\":24,\"numberOfBadImpressions\":8,\"numberOfGoodImpressions\":16},\"success\":true}"
+						}
+					]
+				},
+				{
+					"name": "updateProduct",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file"
+								},
+								{
+									"key": "model",
+									"value": "{\n\"id\":1,\n  \"vendorUID\": \"f2fcdbb9-20aa-44cf-acbd-16720db2590d\",\n  \"title\": \"Corn Flex\",\n  \"description\": \"Healthy Food-1\",\n  \"price\": \"2000\",\n  \"numberOfViews\": 24,\n  \"numberOfBadImpressions\": 8,\n  \"numberOfGoodImpressions\": 16,\n  \"dietarySet\": [\n    \n    {\n      \"id\": 2\n    }\n  ]\n}\n",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://ec2-35-174-111-88.compute-1.amazonaws.com:8080/B2BFoodGroupTask/products/update",
+							"protocol": "http",
+							"host": [
+								"ec2-35-174-111-88",
+								"compute-1",
+								"amazonaws",
+								"com"
+							],
+							"port": "8080",
+							"path": [
+								"B2BFoodGroupTask",
+								"products",
+								"update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "updateProduct",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": {
+												"0": {}
+											}
+										},
+										{
+											"key": "model",
+											"value": "{\n\"id\":1,\n  \"vendorUID\": \"f2fcdbb9-20aa-44cf-acbd-16720db2590d\",\n  \"title\": \"Corn Flex\",\n  \"description\": \"Healthy Food-1\",\n  \"price\": \"2000\",\n  \"numberOfViews\": 24,\n  \"numberOfBadImpressions\": 8,\n  \"numberOfGoodImpressions\": 16,\n  \"dietarySet\": [\n    \n    {\n      \"id\": 2\n    }\n  ]\n}\n",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://ec2-35-174-111-88.compute-1.amazonaws.com:8080/B2BFoodGroupTask/products/update",
+									"protocol": "http",
+									"host": [
+										"ec2-35-174-111-88",
+										"compute-1",
+										"amazonaws",
+										"com"
+									],
+									"port": "8080",
+									"path": [
+										"B2BFoodGroupTask",
+										"products",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 26 May 2019 03:04:02 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked",
+									"name": "Transfer-Encoding",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								}
+							],
+							"cookie": [],
+							"body": "{\"statusCode\":\"OK\",\"errorMessage\":null,\"result\":{\"id\":1,\"vendorUID\":\"f2fcdbb9-20aa-44cf-acbd-16720db2590d\",\"title\":\"Corn Flex\",\"description\":\"Healthy Food-1\",\"price\":2000.0,\"imageEntity\":{\"id\":1,\"imageName\":\"corn-flex.jpeg\",\"imageUrl\":\"https://b2b-food-group-images.s3.amazonaws.com/corn-flex.jpeg\"},\"numberOfViews\":24,\"numberOfBadImpressions\":8,\"numberOfGoodImpressions\":16},\"success\":true}"
+						}
+					]
+				},
+				{
+					"name": "deleteProductById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://ec2-35-174-111-88.compute-1.amazonaws.com:8080/B2BFoodGroupTask/products/deleteById/3",
+							"protocol": "http",
+							"host": [
+								"ec2-35-174-111-88",
+								"compute-1",
+								"amazonaws",
+								"com"
+							],
+							"port": "8080",
+							"path": [
+								"B2BFoodGroupTask",
+								"products",
+								"deleteById",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProductByTitle",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://ec2-35-174-111-88.compute-1.amazonaws.com:8080/B2BFoodGroupTask/products/deleteByTitle/Corn Flex-2",
+							"protocol": "http",
+							"host": [
+								"ec2-35-174-111-88",
+								"compute-1",
+								"amazonaws",
+								"com"
+							],
+							"port": "8080",
+							"path": [
+								"B2BFoodGroupTask",
+								"products",
+								"deleteByTitle",
+								"Corn Flex-2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searchByTitleOrDescription",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://ec2-35-174-111-88.compute-1.amazonaws.com:8080/B2BFoodGroupTask/products/search/health",
+							"protocol": "http",
+							"host": [
+								"ec2-35-174-111-88",
+								"compute-1",
+								"amazonaws",
+								"com"
+							],
+							"port": "8080",
+							"path": [
+								"B2BFoodGroupTask",
+								"products",
+								"search",
+								"health"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "search with title",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "http://ec2-35-174-111-88.compute-1.amazonaws.com:8080/B2BFoodGroupTask/products/search/corn",
+									"protocol": "http",
+									"host": [
+										"ec2-35-174-111-88",
+										"compute-1",
+										"amazonaws",
+										"com"
+									],
+									"port": "8080",
+									"path": [
+										"B2BFoodGroupTask",
+										"products",
+										"search",
+										"corn"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 26 May 2019 03:10:08 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked",
+									"name": "Transfer-Encoding",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								}
+							],
+							"cookie": [],
+							"body": "{\"statusCode\":\"OK\",\"errorMessage\":null,\"result\":[{\"id\":1,\"vendorUID\":\"f2fcdbb9-20aa-44cf-acbd-16720db2590d\",\"title\":\"Corn Flex\",\"description\":\"Healthy Food-1\",\"price\":2000.0,\"imageEntity\":{\"id\":1,\"imageName\":\"corn-flex.jpeg\",\"imageUrl\":\"https://b2b-food-group-images.s3.amazonaws.com/corn-flex.jpeg\"},\"numberOfViews\":24,\"numberOfBadImpressions\":8,\"numberOfGoodImpressions\":16}],\"success\":true}"
+						},
+						{
+							"name": "search with part of description",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "http://ec2-35-174-111-88.compute-1.amazonaws.com:8080/B2BFoodGroupTask/products/search/health",
+									"protocol": "http",
+									"host": [
+										"ec2-35-174-111-88",
+										"compute-1",
+										"amazonaws",
+										"com"
+									],
+									"port": "8080",
+									"path": [
+										"B2BFoodGroupTask",
+										"products",
+										"search",
+										"health"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 26 May 2019 03:10:58 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked",
+									"name": "Transfer-Encoding",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								}
+							],
+							"cookie": [],
+							"body": "{\"statusCode\":\"OK\",\"errorMessage\":null,\"result\":[{\"id\":1,\"vendorUID\":\"f2fcdbb9-20aa-44cf-acbd-16720db2590d\",\"title\":\"Corn Flex\",\"description\":\"Healthy Food-1\",\"price\":2000.0,\"imageEntity\":{\"id\":1,\"imageName\":\"corn-flex.jpeg\",\"imageUrl\":\"https://b2b-food-group-images.s3.amazonaws.com/corn-flex.jpeg\"},\"numberOfViews\":24,\"numberOfBadImpressions\":8,\"numberOfGoodImpressions\":16}],\"success\":true}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "DietaryApi",
+			"item": [
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/B2BFoodGroupTask/dietary/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"B2BFoodGroupTask",
+								"dietary",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/B2BFoodGroupTask/dietary",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"B2BFoodGroupTask",
+								"dietary"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createDietary",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n            \"flagName\": \"with-lactose\"\n        }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/B2BFoodGroupTask/dietary",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"B2BFoodGroupTask",
+								"dietary"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateDietary",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n        \"id\": 3,\n        \"flagName\": \"with-lactose-updated\"\n    }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/B2BFoodGroupTask/dietary",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"B2BFoodGroupTask",
+								"dietary"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteById",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/B2BFoodGroupTask/dietary/Id/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"B2BFoodGroupTask",
+								"dietary",
+								"Id",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteByName",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/B2BFoodGroupTask/dietary/name/vegan",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"B2BFoodGroupTask",
+								"dietary",
+								"name",
+								"vegan"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DietaryApi_TEST",
+			"item": [
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://ec2-35-174-111-88.compute-1.amazonaws.com:8080/B2BFoodGroupTask/dietary/2",
+							"protocol": "http",
+							"host": [
+								"ec2-35-174-111-88",
+								"compute-1",
+								"amazonaws",
+								"com"
+							],
+							"port": "8080",
+							"path": [
+								"B2BFoodGroupTask",
+								"dietary",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "findById",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "http://ec2-35-174-111-88.compute-1.amazonaws.com:8080/B2BFoodGroupTask/dietary/2",
+									"protocol": "http",
+									"host": [
+										"ec2-35-174-111-88",
+										"compute-1",
+										"amazonaws",
+										"com"
+									],
+									"port": "8080",
+									"path": [
+										"B2BFoodGroupTask",
+										"dietary",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 26 May 2019 00:20:58 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked",
+									"name": "Transfer-Encoding",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								}
+							],
+							"cookie": [],
+							"body": "{\"statusCode\":\"OK\",\"errorMessage\":null,\"result\":{\"id\":2,\"flagName\":\"vegan\"},\"success\":true}"
+						}
+					]
+				},
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://ec2-35-174-111-88.compute-1.amazonaws.com:8080/B2BFoodGroupTask/dietary",
+							"protocol": "http",
+							"host": [
+								"ec2-35-174-111-88",
+								"compute-1",
+								"amazonaws",
+								"com"
+							],
+							"port": "8080",
+							"path": [
+								"B2BFoodGroupTask",
+								"dietary"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "findAll",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "http://ec2-35-174-111-88.compute-1.amazonaws.com:8080/B2BFoodGroupTask/dietary",
+									"protocol": "http",
+									"host": [
+										"ec2-35-174-111-88",
+										"compute-1",
+										"amazonaws",
+										"com"
+									],
+									"port": "8080",
+									"path": [
+										"B2BFoodGroupTask",
+										"dietary"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 26 May 2019 00:20:23 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked",
+									"name": "Transfer-Encoding",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								}
+							],
+							"cookie": [],
+							"body": "{\"statusCode\":\"OK\",\"errorMessage\":null,\"result\":[{\"id\":2,\"flagName\":\"vegan\"},{\"id\":3,\"flagName\":\"vegan-2\"},{\"id\":4,\"flagName\":\"vegan-3\"},{\"id\":1,\"flagName\":\"with-lactose-updated\"}],\"success\":true}"
+						}
+					]
+				},
+				{
+					"name": "createDietary",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n            \"flagName\": \"vegan-3\"\n        }"
+						},
+						"url": {
+							"raw": "http://ec2-35-174-111-88.compute-1.amazonaws.com:8080/B2BFoodGroupTask/dietary",
+							"protocol": "http",
+							"host": [
+								"ec2-35-174-111-88",
+								"compute-1",
+								"amazonaws",
+								"com"
+							],
+							"port": "8080",
+							"path": [
+								"B2BFoodGroupTask",
+								"dietary"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "createDietary",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\n            \"flagName\": \"vegan-3\"\n        }"
+								},
+								"url": {
+									"raw": "http://ec2-35-174-111-88.compute-1.amazonaws.com:8080/B2BFoodGroupTask/dietary",
+									"protocol": "http",
+									"host": [
+										"ec2-35-174-111-88",
+										"compute-1",
+										"amazonaws",
+										"com"
+									],
+									"port": "8080",
+									"path": [
+										"B2BFoodGroupTask",
+										"dietary"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 26 May 2019 00:19:50 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked",
+									"name": "Transfer-Encoding",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								}
+							],
+							"cookie": [],
+							"body": "{\"statusCode\":\"OK\",\"errorMessage\":null,\"result\":{\"id\":4,\"flagName\":\"vegan-3\"},\"success\":true}"
+						}
+					]
+				},
+				{
+					"name": "updateDietary",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n        \"id\": 1,\n        \"flagName\": \"with-lactose-updated\"\n    }"
+						},
+						"url": {
+							"raw": "http://ec2-35-174-111-88.compute-1.amazonaws.com:8080/B2BFoodGroupTask/dietary",
+							"protocol": "http",
+							"host": [
+								"ec2-35-174-111-88",
+								"compute-1",
+								"amazonaws",
+								"com"
+							],
+							"port": "8080",
+							"path": [
+								"B2BFoodGroupTask",
+								"dietary"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "updateDietary",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\n        \"id\": 1,\n        \"flagName\": \"with-lactose-updated\"\n    }"
+								},
+								"url": {
+									"raw": "http://ec2-35-174-111-88.compute-1.amazonaws.com:8080/B2BFoodGroupTask/dietary",
+									"protocol": "http",
+									"host": [
+										"ec2-35-174-111-88",
+										"compute-1",
+										"amazonaws",
+										"com"
+									],
+									"port": "8080",
+									"path": [
+										"B2BFoodGroupTask",
+										"dietary"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 26 May 2019 00:21:07 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked",
+									"name": "Transfer-Encoding",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								}
+							],
+							"cookie": [],
+							"body": "{\"statusCode\":\"OK\",\"errorMessage\":null,\"result\":{\"id\":1,\"flagName\":\"with-lactose-updated\"},\"success\":true}"
+						}
+					]
+				},
+				{
+					"name": "deleteById",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://ec2-35-174-111-88.compute-1.amazonaws.com:8080/B2BFoodGroupTask/dietary/Id/3",
+							"protocol": "http",
+							"host": [
+								"ec2-35-174-111-88",
+								"compute-1",
+								"amazonaws",
+								"com"
+							],
+							"port": "8080",
+							"path": [
+								"B2BFoodGroupTask",
+								"dietary",
+								"Id",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deleteById",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://ec2-35-174-111-88.compute-1.amazonaws.com:8080/B2BFoodGroupTask/dietary/Id/3",
+									"protocol": "http",
+									"host": [
+										"ec2-35-174-111-88",
+										"compute-1",
+										"amazonaws",
+										"com"
+									],
+									"port": "8080",
+									"path": [
+										"B2BFoodGroupTask",
+										"dietary",
+										"Id",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 26 May 2019 00:21:34 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked",
+									"name": "Transfer-Encoding",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								}
+							],
+							"cookie": [],
+							"body": "{\"statusCode\":\"OK\",\"errorMessage\":null,\"result\":null,\"success\":true}"
+						}
+					]
+				},
+				{
+					"name": "deleteByName",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://ec2-35-174-111-88.compute-1.amazonaws.com:8080/B2BFoodGroupTask/dietary/name/vegan-3",
+							"protocol": "http",
+							"host": [
+								"ec2-35-174-111-88",
+								"compute-1",
+								"amazonaws",
+								"com"
+							],
+							"port": "8080",
+							"path": [
+								"B2BFoodGroupTask",
+								"dietary",
+								"name",
+								"vegan-3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deleteByName",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://ec2-35-174-111-88.compute-1.amazonaws.com:8080/B2BFoodGroupTask/dietary/name/vegan-3",
+									"protocol": "http",
+									"host": [
+										"ec2-35-174-111-88",
+										"compute-1",
+										"amazonaws",
+										"com"
+									],
+									"port": "8080",
+									"path": [
+										"B2BFoodGroupTask",
+										"dietary",
+										"name",
+										"vegan-3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 26 May 2019 00:22:18 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked",
+									"name": "Transfer-Encoding",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								}
+							],
+							"cookie": [],
+							"body": "{\"statusCode\":\"OK\",\"errorMessage\":null,\"result\":null,\"success\":true}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
